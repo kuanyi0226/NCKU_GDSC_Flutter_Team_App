@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//使用一個listview.builder 條列式顯示所有Widget的教學，點擊特定widget可以navigate到對應的widget教學頁面
+//使用一個listview 條列式顯示所有Widget的教學，點擊特定widget可以navigate到對應的widget教學頁面
 class WidgetsPage extends StatefulWidget {
   const WidgetsPage({super.key});
 
