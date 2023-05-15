@@ -61,6 +61,14 @@ class _HomeDrawerPageState extends State<HomeDrawerPage> {
               scaffoldKey.currentState!.openEndDrawer(); //close drawler
             },
           ),
+          //Favorite Resource
+          ListTile(
+            leading: Icon(Icons.disc_full),
+            title: Text('最愛的資源'),
+            onTap: () {
+              scaffoldKey.currentState!.openEndDrawer(); //close drawler
+            },
+          ),
 
           //Websites
           Padding(
