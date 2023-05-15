@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gdsc_flutter_group/pages/widgets/widget_text_page.dart';
+
+import './widgets/widget_text_page.dart';
+import './widgets_page.dart';
+import './settings_page.dart';
+
+import '../services/url_service.dart';
 
 import '../materials/text.dart';
 
@@ -49,17 +54,10 @@ class _HomeDrawerPageState extends State<HomeDrawerPage> {
           ),
           ListTile(
             leading: Icon(Icons.disc_full),
-            title: Text('Dart教學'),
-            onTap: () {
-              scaffoldKey.currentState!.openEndDrawer(); //close drawler
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.disc_full),
             title: Text('Widget'),
             onTap: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => WidgetTextPage()));
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (context) => WidgetsPage()));
               scaffoldKey.currentState!.openEndDrawer(); //close drawler
             },
           ),
@@ -72,7 +70,8 @@ class _HomeDrawerPageState extends State<HomeDrawerPage> {
           ListTile(
               leading: Icon(Icons.school),
               title: Text('GDSC'),
-              onTap: () => {} //_launchURL(),
+              onTap: () async => UrlService.launchWebsite(
+                  'https', 'gdsc.community.dev', '') //_launchURL(),
               ),
           //Others
           Padding(
@@ -83,7 +82,8 @@ class _HomeDrawerPageState extends State<HomeDrawerPage> {
               leading: Icon(Icons.settings),
               title: Text('設定 Settings'),
               onTap: () {
-                //Navagtor
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => SettingsPage()));
                 scaffoldKey.currentState!.openEndDrawer(); //close drawer
               }),
           SizedBox(height: 50),

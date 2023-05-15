@@ -29,14 +29,6 @@ class _HomePageState extends State<HomePage> {
               'assets/images/app_icon.png',
               fit: BoxFit.cover,
             ),
-            //Buttons
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                HomeButton(onTap: () {}, text: 'Widgets'),
-                HomeButton(onTap: () {}, text: 'Widgets'),
-              ],
-            ),
           ]),
         ),
       ),

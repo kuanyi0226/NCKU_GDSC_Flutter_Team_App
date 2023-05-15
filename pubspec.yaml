@@ -29,7 +29,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  url_launcher: ^6.1.5
 
+  #firebase
+  cloud_firestore: 4.4.0
+  firebase_auth: ^4.2.0
+  firebase_core: ^2.4.0
+  google_sign_in: ^5.4.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -38,6 +44,27 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.9.2
+  flutter_native_splash: ^2.2.7
+
+#flutter pub run flutter_launcher_icons:main 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+
+#flutter pub run flutter_native_splash:create
+flutter_native_splash:
+  color: "#0000cc"
+  color_dark: "#0000cc"
+  image: "assets/images/app_icon.png"
+  image_dark: "assets/images/app_icon.png"
+
+  android_12:
+    icon_background_color: "#0000cc"
+    icon_background_color_dark: "#0000cc"
+    image: "assets/images/app_icon.png"
+    image_dark: "assets/images/app_icon.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
